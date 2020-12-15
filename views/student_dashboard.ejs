@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="Stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <% var studentDetails, data; %>
+    <!--Nav Bar-->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Online Exam</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/student/studentLogout"><span class="glyphicon glyphicon-user"></span> Sign
+                        Out</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--Nav Bar-->
+    <!--Section-->
+    <div class="container-fluid" style="margin-top: -100px;">
+
+        <div class="containter">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <h2 class="display2">Welcome <strong><%= studentDetails.studentName %></strong>!</h2>
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <br>
+                    <span id="exam_details">
+                        <div class="card">
+                            <div class="card-body">
+                                <table class="table table-striped table-hover table-bordered">
+                                    <thead>
+                                        <th colspan="2" style="text-align: center;font-weight: bold;">Exam Details</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><b>Exam Title</b></td>
+                                            <td>Java</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Exam Date &amp; Time</b></td>
+                                            <td>2020-07-03 21:00:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Exam Duration</b></td>
+                                            <td>60 Minute</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Exam Total Question</b></td>
+                                            <td>50 </td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Marks Per Right Answer</b></td>
+                                            <td>1 Mark</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Marks Per Wrong Answer</b></td>
+                                            <td>0 Mark</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td colspan="2" align="center">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                    data-target=".rules">
+                                                    Start Test
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade rules" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="rulesTitle">Instructions</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>This quiz consists of 10 multiple-choice questions. To be successful with the weekly quizzes,
+                        it’s important to thoroughly read chapter 5 in the textbook. It will also be extremely useful to
+                        study the key terms at the end of the chapter
+                        and review the Test Your Knowledge activity at the end of the chapter. Keep the following in
+                        mind:
+                    <ul>
+                        <li><b>Multiple Attempts -</b>You will have three attempts for this quiz with your highest score
+                            being recorded in the grade book.</li>
+                        <li><b>Timing - </b>You will need to complete each of your attempts in one sitting, as you are
+                            allotted 30 minutes to complete each attempt</li>
+                        <li><b>Answers - </b>You may review your answer-choices and compare them to the correct answers
+                            after your final attempt.</li>
+                    </ul>
+                    </p>
+                    <p>To start, click the<b>"Take the Test</b> button. When finished, click the <b>"Submit Quiz"</b>
+                        button.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" onclick="location.href='test.html'"> Take the
+                        Test</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div class="footer ">
+        <div class="footer-copyright text-center py-3 ">© 2020 Copyright:
+            <a href="# "> EiZiTech</a>
+        </div>
+    </div>
+    <!-- Footer -->
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/guillaumepotier/Parsley.js@2.9.1/dist/parsley.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <title>Registration</title>
+</head>
+
+<body>
+    <div class="containter">
+        <div class="d-flex justify-content-center">
+            <br /><br />
+            <div class="card w-50" style="margin-top:50px;margin-bottom: 100px;">
+                <div class="card-header">
+                    <h4>Student Registration</h4>
+                </div>
+                <div class="card-body">
+                    <span id="message"></span>
+                    <form method="POST" id="user_register_form" action="/student/studentRegister">
+                        <div class="form-group">
+                            <label>Enter USN</label>
+                            <input type="text" name="studentUSN" id="user_id" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Enter email</label>
+                            <input type="email" name="studentEmail" id="user_id" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Enter name</label>
+                            <input type="text" name="studentName" id="user_name" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Enter contact no.</label>
+                            <input type="tel" name="studentContact" id="user_contact" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Enter college name</label>
+                            <input type="text" name="studentCollege" id="user_college_name" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Enter course</label>
+                            <input type="text" name="studentCourse" id="user_course" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Enter department</label>
+                            <input type="text" name="studentDepartment" id="user_department" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" name="password" id="user_password" class="form-control" />
+                        </div>
+                        <br />
+                        <div class="form-group" align="center">
+                            <input type="submit" name="user_register" id="user_register" class="btn btn-info"
+                                value="submit" />
+                        </div>
+                    </form>
+                    <div align="center">
+                        <a href="/studentLogin">Login</a>
+                    </div>
+                </div>
+            </div>
+            <br /><br />
+            <br /><br />
+        </div>
+    </div>
+    <footer class="page-footer font-small blue">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="/"> EiZiTech</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Student Login</title>
+    <link rel="StyleSheet" href="css/style.css" type="text/css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <% var data, dataSuccess %>
+    <% if(data != null) {%>
+    <div class="alert alert-success" role="alert">
+        <strong>Thank You!</strong> You successfully logged Out.
+    </div>
+    <% } %>
+    <% if(dataSuccess != null) {%>
+        <div class="alert alert-success" role="alert">
+            <strong>Thank You!</strong> <%= dataSuccess %>.
+        </div>
+    <% } %>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-6" style="margin-top:20px;">
+
+                <span id="message">
+            </span>
+                <div class="card">
+                    <div class="card-header">Student Login</div>
+                    <div class="card-body">
+                        <form method="POST" id="student_login_form" action="/student/studentLogin">
+                            <div class="form-group">
+                                <label>Enter email</label>
+                                <input type="email" name="studentEmail" id="student_email_address" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Enter password</label>
+                                <input type="password" name="password" id="student_password" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="student_login" id="student_login" class="btn btn-info" value="submit" />
+                            </div>
+                        </form>
+                        <div align="center">
+                            <a href="/studentRegister">Register</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-3">
+
+            </div>
+        </div>
+    </div>
+    <footer class="page-footer font-small blue">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="/"> EiZiTech</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer<div class="fadeIn first">
+                <img src="images/login-logo.png" id="icon" alt="User Icon" />
+            </div> -->
+
+    <!-- Footer -->
+
+</body>
+
+</html>
